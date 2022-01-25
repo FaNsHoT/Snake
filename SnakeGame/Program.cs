@@ -82,8 +82,8 @@ namespace SnakeGame
         void ShowBanner()
         {
             LevelInfo();
-            height = m; // Высота
-            width = n; // Ширина
+            height = m;
+            width = n;
             Console.Clear();
             int origWidth = Console.WindowWidth;
             int origHeight = Console.WindowHeight;
@@ -173,7 +173,7 @@ namespace SnakeGame
             int preX = TailX[0];
             int preY = TailY[0];
             int tempX, tempY;
-            // Проверка на нажатии кнопки "пауза"
+            // Проверка на нажатие кнопки "пауза"
             if (dir != "Stop")
             {
                 TailX[0] = HeadX;
@@ -360,7 +360,6 @@ namespace SnakeGame
             return (levelMap[i, j].ToString() == "#");
         }
 
-
         bool IsFruitCell(int i, int j)
         {
             return (j == fruitX && i == fruitY);
@@ -385,6 +384,7 @@ namespace SnakeGame
             Console.WriteLine("Your food score " + score);
             Console.WriteLine($"Food score for win {foodForWin}");
         }
+        
         void Render()
         {
             Console.SetCursorPosition(0, 0);
